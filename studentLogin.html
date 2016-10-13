@@ -1,0 +1,34 @@
+<?php
+
+include('./headHTML.html');
+
+?>
+
+<form action='studentLogin.php' method='post' name='studentForm'>
+
+  <!-- Get basic information from the student user-->
+  UserID:<input type='text' name='UserID'> <br>
+  Fname:<input type='text' name='Fname'> <br>
+  Lname:<input type='text' name='Lname'> <br>
+  Password:<input type='text' name='Password'> <br>
+
+  <!-- Give the student options to choose their major-->
+  <input type='radio' name='majorSelection' value='BioBA'>BioBA:<input type='text' name='BioBA'> <br>
+  <input type='radio' name='majorSelection' value ='BioBS'>BioBS:<input type='text' name='BioBS'> <br>
+  <input type='radio' name='majorSelection' value ='Biochem'>Biochem:<input type='text' name='Biochem'> \
+<br>
+  <input type='radio' name='majorSelection' value ='Bioinfo'>Bioinfo:<input type='text' name='Bioinfo'> \
+<br>
+  <input type='radio' name='majorSelection' value ='Bioed'>Bioed:<input type='text' name='Bioed'> <br>
+  <input type='radio' name='majorSelection' value ='ChemBA'>ChemBA:<input type='text' name='ChemBA'> <br\
+>
+  <input type='radio' name='majorSelection' value ='ChemBS'>ChemBS:<input type='text' name='ChemBS'> <br\
+>
+  <input type='radio' name='majorSelection' value ='Chemed'>Chemed:<input type='text' name='Chemed'> <br\
+>
+
+<input type='submit'>
+
+</form>
+
+<?php
