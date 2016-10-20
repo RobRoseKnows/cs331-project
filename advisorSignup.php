@@ -33,6 +33,8 @@
     <label for='rePassword'>Retype Password: </label>
     <input type='password' id='rePassword' required> <br>
 
+    <input type='submit'>
+
 </form>
 
 <?php 
