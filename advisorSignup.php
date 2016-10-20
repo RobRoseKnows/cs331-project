@@ -8,7 +8,7 @@
 
 <form action='doAdvisorSignUp.php' method='post' name='advisorSignUp'>
     <label for='advEmail'>Email: </label>
-    <input type='email' id='advEmail' pattern='<? echo $umbcEmailPattern; ?>' required placeholder='example@umbc.edu'> <br>
+    <input type='email' id='advEmail' pattern='[A-Za-z0-9._+-]+@[A-Za-z0-9._-]*umbc.edu' required placeholder='example@umbc.edu'> <br>
     
     <label for='advTitle'>Title: </label>
     <select name='advTitle'>
@@ -19,7 +19,7 @@
     </select> <br>
 
     <label for='advIdNum'>Id Number: </label>
-    <input type='text' id='advIdNum' pattern='<? echo $umbcIdPattern;?>' required> <br>
+    <input type='text' id='advIdNum' pattern='[A-Z]{2}[0-9]{5}' required> <br>
 
     <label for='fName'>First Name: </label>
     <input type='text' id='fName'> <br>
