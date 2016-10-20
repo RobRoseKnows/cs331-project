@@ -38,7 +38,12 @@ on>
   <label for='rePassword'>Retype Password: </label>
     <input type='password' id='rePassword' required> <br>
 
+
+	<div class="nextButton">
+			<input type="submit" name="Submit" class="button large go" value="Submit">
+	    </div>
 </form>
+
 
 <?php
   require('footer.php');

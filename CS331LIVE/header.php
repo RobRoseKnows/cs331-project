@@ -9,7 +9,7 @@ $COMMON = new Common($debug);
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<link rel='stylesheet' type='text/css' href='standard.css'/>
   </head>
   <div id="header">
 

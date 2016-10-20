@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Student Advising Home</title>
-	<link rel='stylesheet' type='text/css' href='../css/standard.css'/>
+	<link rel='stylesheet' type='text/css' href='standard.css'/>
   </head>
   <body>
 	<div class="container">
