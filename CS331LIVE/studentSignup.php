@@ -23,9 +23,8 @@ red> <br>
     <select name='major'>
         <option value='BioBA'>Biological Sciences BA</option>
         <option value='BioBS'>Biological Sciences BS</option>
-        <option value='Biochem'>Biochemisty & Molecular Biology BS</option>
-        <option value='Bioinfo'>Bioinformatics & Computational Biology BS</opti\
-on>
+        <option value='Biochem'>Biochemisty &amp; Molecular Biology BS</option>
+        <option value='Bioinfo'>Bioinformatics &amp; Computational Biology BS</option>
         <option value='Bioed'>Biology Education BA</option>
         <option value='ChemBA'>Chemistry BA</option>
         <option value='ChemBS'>Chemistry BS</option>
