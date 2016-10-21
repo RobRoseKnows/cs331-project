@@ -17,7 +17,7 @@ include("CommonVariables.php");
     </select> <br>
 
   <label for='advIdNum'>Id Number: </label>
-    <input type='text' id='advIdNum' name='advIdNum' pattern='[A-Z]{2}[0-9]{5}' required> <br>
+    <input type='text' id='advIdNum' name='advIdNum' pattern='[A-Z]{2}[0-9]{5}' required placeholder='AB12345'> <br>
 
   <label for='fName'>First Name: </label>
     <input type='text' id='fName' name='fName' required> <br>
