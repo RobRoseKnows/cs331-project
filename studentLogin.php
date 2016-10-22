@@ -1,5 +1,5 @@
 <?php
-$headerTitle = "Student Sign In";
+$headerTitle = "Student Login";
 require("header.php");
 include("CommonVariables.php");
 ?>
