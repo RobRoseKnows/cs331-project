@@ -1,5 +1,5 @@
 <?php
-$headerTitle = "Advisor Sign In";
+$headerTitle = "Advisor Login";
 require("header.php");
 include("CommonVariables.php");
 ?>
