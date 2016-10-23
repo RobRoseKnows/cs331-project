@@ -1,14 +1,7 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Student Advising Home</title>
-	<link rel='stylesheet' type='text/css' href='standard.css'/>
-  </head>
-  <body>
-	<div class="container">
-	<?php
-		include('./header.php');
-	?>
+<?php
+	$title = "Student Home";
+	require('./header.php');
+?>
 	<div class="container main">
 	<div id="nav">
 		<form action="processStudentHomepage.php" method="post" name="Home">
@@ -29,9 +22,7 @@
 
 	</div>
 	</div>
-	<?php
-		include('./footer.php');
-	?>
 	</div>
-  </body>
-</html>
+	<?php
+		require('./footer.php');
+	?>

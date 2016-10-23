@@ -1,15 +1,14 @@
 <?php
-$headerTitle = "Student Sign Up";
+$title = "Student Sign Up";
 require("header.php");
-include("CommonVariables.php");
 ?>
 
 <form action='doStudentSignUp.php' method='post' name='studentSignUp'>
     <label for='studEmail'>Email: </label>
-    <input type='text' id='studEmail' name='studEmail' required placeholder='example@umbc.edu'> <br>
+    <input type='text' id='studEmail' name='studEmail' pattern=<?php echo("'$umbcEmailPattern'"); ?> required placeholder='example@umbc.edu'> <br>
 
   <label for='studIdNum'>Student Id Number: </label>
-    <input type='text' id='studIdNum' name='studIdNum' pattern='[A-Z]{2}[0-9]{5}' required> <br>
+    <input type='text' id='studIdNum' name='studIdNum' pattern=<?php echo("'$umbcIdPattern'"); ?> required> <br>
 
   <label for='fName'>First Name: </label>
     <input type='text' id='fName' name='fName' required> <br>

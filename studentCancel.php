@@ -1,1 +1,3 @@
-//cancel appt file
+<?php
+    //cancel appt file
+?>

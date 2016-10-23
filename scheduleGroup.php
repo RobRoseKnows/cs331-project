@@ -1,13 +1,7 @@
 <?php
-session_start();
+  $title = "Schedule Group";
+  require("./header.php");
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-	<link rel='stylesheet' type='text/css' href='standard.css'/>
-  </head>
-  <body>
     <div id="login">
       <div id="form">
         <div class="top">
@@ -86,8 +80,6 @@ session_start();
 		<form method="link" action="advisorHome.php" name="home">
 			<input type="submit" name="next" class="button large" value="Return to Home">
 		</form>
-
-
-  </body>
-  
-</html>
+<?php
+  require("./footer.php");
+?>

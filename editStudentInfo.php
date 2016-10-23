@@ -1,6 +1,6 @@
 <?php
-session_start();
-include('CommonMethods.php');
+	$title = "Edit Student";
+	require("header.php");
 
 $debug = true;
 $COMMON = new Common($debug);
@@ -21,20 +21,13 @@ while($row = mysql_fetch_row($rs)){
 }
 
 ?>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Edit Student Information</title>
-    	<link rel='stylesheet' type='text/css' href='standard.css'/>
-
-  </head>
   <body>
     <div id="login">
       <div id="form">
 	<!--Displays previously parsed information-->
 			<div class="top">
 			<h2>Edit Student Information<span class="login-create"></span></h2>
-			<form action="processStudentEdit.php" method="post" name="Edit">
+			<form action="./processStudentEdit.php" method="post" name="Edit">
 			<div class="field">
 				<label for="firstName">First Name</label>
 				<input id="firstName" size="30" maxlength="50" type="text" name="firstName" required value=<?php echo $_SESSION["firstName"]?>>

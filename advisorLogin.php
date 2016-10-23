@@ -1,10 +1,9 @@
 <?php
-$headerTitle = "Advisor Sign In";
-require("header.php");
-include("CommonVariables.php");
+  $title = "Advisor Sign In";
+  require("./header.php");
 ?>
 
-<form action='doAdvisorLogin.php' method='post' name='advisorLogin'>
+<form action='./doAdvisorLogin.php' method='post' name='advisorLogin'>
 
    <label for='advIdNum'>Id Number: </label>
      <input type='text' id='advIdNum' name='advIdNum' pattern='[A-Z]{2}[0-9]{5}' required> <br>
@@ -17,5 +16,5 @@ include("CommonVariables.php");
 </form>
 
 <?php
-  require('footer.php');
+  require('./footer.php');
 ?>

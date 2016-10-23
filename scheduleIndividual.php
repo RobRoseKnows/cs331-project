@@ -1,25 +1,12 @@
 <?php
-session_start();
+  $title = "Schedule Induvidual Appointment";
+  require("./header.php");
 ?>
-
-<!DOCTYPE html>
-<!--page layout-->
-
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Schedule Individual Appointment</title>
-    <script type="text/javascript">
-
-    </script>
-	<link rel='stylesheet' type='text/css' href='standard.css'/>
-  </head>
-  <body>
     <div id="login">
       <div id="form">
         <div class="top">
 		    <h1>Schedule Individual Appointments</h1>
-        <form action="processIndApp.php" method="post" name="Confirm">
+        <form action="./processIndApp.php" method="post" name="Confirm">
 	    <div class="field">
 	      <label for="Date">Date</label>
 

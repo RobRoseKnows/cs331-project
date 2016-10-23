@@ -1,24 +1,14 @@
 <?php
-session_start();
-$debug = false;
-include('./CommonMethods.php');
+require("./header.php");
+
 $COMMON = new Common($debug);
 ?>
-
-<html lang="en">
-<!-- basic layout-->
-  <head>
-    <meta charset="UTF-8" />
-    <title>Search for Appointment</title>
-        	<link rel='stylesheet' type='text/css' href='standard.css'/>
-  </head>
-  <body>
     <div id="login">
       <div id="form">
         <div class="top">
 		<h1>Search for Appointments</h1>
 	    <div class="field">
-		<form action="apptSearchResults.php" method="post" name="SearchApp">
+		<form action="./apptSearchResults.php" method="post" name="SearchApp">
 			<label for="date">Date</label>
 	      	<input id="date" type="date" name="date" placeholder="mm/dd/yyyy" autofocus> (mm/dd/yyyy)
 			
@@ -62,6 +52,6 @@ $COMMON = new Common($debug);
 			<input type="submit" name="return" class="button large go" value="Return to Home">
 			</form>
 
-		
-  </body>
-</html>
+<?php
+	require("./footer.php");
+?>

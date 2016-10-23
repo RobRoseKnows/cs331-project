@@ -1,15 +1,7 @@
 <?php
-session_start();
+	$title = "Select Advising Type";
+	require("./header.php");
 ?>
-
-<html lang="en">
-<!--html styling-->
-
-  <head>
-    <meta charset="UTF-8" />
-    <title>Select Advising Type</title>
-	<link rel='stylesheet' type='text/css' href='./css/standard.css'/>
-  </head>
   <body>
     <div id="login">
       <div id="form">
@@ -35,5 +27,6 @@ session_start();
 		<input type="submit" name="home" class="button large" value="Cancel">
 		</form>
 		</div>
-  </body>
-</html>
+<?php
+	require("./footer.php");
+?>
