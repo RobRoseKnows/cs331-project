@@ -9,7 +9,12 @@ $COMMON = new Common($debug);
 $studIdNum = ($_POST['studIdNum']);
 $password = ($_POST['password']);
 
-$sql = "SELECT * FROM `Student Data` WHERE `StudentID` = '$studIdNum' AND `Password` = '".md5($studIdNum)."'";
+$_SESSION['SIDNumber'] = ($_POST['studIdNum']);
+
+
+$truePassword = md5($password);
+
+$sql = "SELECT * FROM `Student Data` WHERE `StudentID` = '$studIdNum' AND `Password` = '$truePassword'";
 
 //determine how many matches the password has for that ID in the database
 $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
@@ -19,13 +24,15 @@ $num_rows = mysql_num_rows($rs);
 if($num_rows == 1){
 
   //allow user to access their homepage
-  echo("correct!!");
+header('Location: studentHome.php');
 }
 
 //otherwise, password is incorrect, route user back to login screen
 else{
 
-  header('Location: studentLogin.php');
+echo(".md5($password).");
+
+  header('Location: studentSignIn.php');
 }
 
 

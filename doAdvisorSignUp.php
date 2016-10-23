@@ -16,6 +16,8 @@ if(($_POST['password']) == ($_POST['rePassword'])){
   $sql = "insert into `Advisor Data` (`ID`, `StudentID`, `FirstName`, `LastName`,`Password`, `Office`) values (NULL, '$advIdNum', '$fName', '$lName','".md5($password)."','$office')";
 
   $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+header('Location: index.html');
+
 }
 
 //otherwise, the passwords do not match and the user must be re-prompted
