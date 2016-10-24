@@ -7,7 +7,7 @@
     <div id="login">
       <div id="form">
         <div class="top">
-        <form method="link" action="./studentSignup.php">
+        <form method="link" action="studentRegister.php">
 	<input type="submit" name="next" class="button large go" value="Student Sign Up">
 	</form>
 	

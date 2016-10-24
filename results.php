@@ -1,28 +1,21 @@
 <?php
 
 $title="Appointment Search Results";
+$debug=false;
 require("./header.php");
-
-
-if($_GET["appointmentDay"] != NULL) {
-
-
 
 ?>
 
+<h1>Appointment Search Results</h1>
 
 <?php
 
-} else {
-    ?>
 
 
-<?
-}
-    
-require("footer.php");
 ?>
 
+<?php
 
+require("./footer.php");
 
-
+?>

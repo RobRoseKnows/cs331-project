@@ -1,6 +1,6 @@
 <?php
   $title = "Advisor Sign In";
-  require("./header.php");
+  require("header.php");
 ?>
 
 <form action='logic/doAdvisorLogin.php' method='post' name='advisorLogin'>

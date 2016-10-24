@@ -3,7 +3,7 @@
 <?php
   $title = "Advisor Choice";
   $debug = false;
-  require("./header.php");
+  require("header.php");
 ?>
 
   <h1>Returning or New?</h1>
@@ -11,14 +11,14 @@
     <div id="login">
       <div id="form">
         <div class="top">
-        <form method="post" action="./advisorSignup.php">
+        <form method="post" action="advisorRegister.php">
 	<input type="submit" name="next" class="button large go" value="Advisor Sign Up">
 	</form>
 	
 	<br />
 	<br />
 
-	<form method="link" action="./advisorSignIn.php">
+	<form method="link" action="advisorSignIn.php">
 	<input type="submit" name="next" class="button large go" value="Returning Sign In">
 	</form>
           

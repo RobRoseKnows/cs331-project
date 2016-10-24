@@ -1,57 +1,55 @@
 <?php
 
-include("CommonMethods.php");
+include_once("../includes/CommonMethods.php");
 
 class SearchingClass
 {
-    var $COMMON;
-    var $DEBUG;
+    protected $COMMON;
+    protected $DEBUG;
 
     function SearchingClass($debug) {
-        $DEBUG = $debug;
-        $COMMON = new Common($debug);
+        $this->DEBUG = $debug;
+        $this->COMMON = new Common($debug);
     }
 
     function searchFor($date, $times, $major, $individual)
     {
         if (!isset($date)) {
-            echo("<script>alert('Search requires at least a date.')</script>");
-
-            require("./footer.php");
-
             header("Location: findAppointment.php");
-        }
+            return null;
+        } else {
 
-        $date = $_GET['searchDate'];
+            $query = "SELECT * FROM `Appointment` WHERE `Day` = '$date'";
 
-        $query = "SELECT * FROM `Appointment` WHERE `Day` = '$date'";
-
-        if (isset($_GET['searchTimes'])) {
-            $clause = " WHERE ";
-            foreach ($_GET['searchTimes'] as $time) {
-                $query .= $clause . "`TimeSlot` = '$time'";
-                $clause = " OR ";
+            if (isset($times)) {
+                $clause = " WHERE ";
+                foreach ($times as $time) {
+                    $query .= $clause . "`TimeSlot` = '$time'";
+                    $clause = " OR ";
+                }
+                $clause = " WHERE ";
             }
-            $clause = " WHERE ";
-        }
 
-        if (isset($_GET['major'])) {
-            $major = $_GET['major'];
-            $query .= " WHERE `Major` = '$major''";
-        }
-
-        if (isset($_GET['individual'])) {
-            $indv = $_GET['individual'];
-            if ($indv == TRUE) {
-                $query .= " WHERE `maxStudents` = 1";
-            } else {
-                $query .= " WHERE `maxStudents` > 1";
+            if (isset($major)) {
+                $query .= " WHERE `Major` = '$major''";
             }
-        }
 
-        $query .= " SORT BY `TimeSlot` ASC";
+            if (isset($individual)) {
+                if ($individual == "true") {
+                    $query .= " WHERE `maxStudents` = 1";
+                } else {
+                    $query .= " WHERE `maxStudents` > 1";
+                }
+            }
+
+            $query .= " SORT BY `TimeSlot` ASC";
+            return $this->COMMON->executeQuery($query, $_SERVER["SCRIPT_NAME"]);
+        }
     }
 
+    function echoItem($appointmentId) {
+
+    }
 }
 ?>
 

@@ -23,7 +23,7 @@ header('Location: index.html');
 //otherwise, the passwords do not match and the user must be re-prompted
 else{
 
-  header('Location: advisorSignup.php');
+  header('Location: advisorRegister.php');
 
 }
 ?>

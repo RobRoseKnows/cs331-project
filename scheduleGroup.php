@@ -12,9 +12,8 @@
 	      <label for="Date">Date</label>
 
 
-	      <input id="Date" type="date" name="Date" placeholder="mm/dd/yyyy" min="2016-10-15" max="2017-6-30" required autofocus> (mm/dd/yyyy)
+	      <input id="Date" type="date" name="Date" placeholder="mm-dd-yyyy" min="2016-10-15" max="2017-6-30" required autofocus> (mm-dd-yyyy)
 	    </div>
-            </div>
 
       <div class="field">
         <label for="Time">Times</label><br>
@@ -44,8 +43,8 @@
         <label for="Majors">Majors</label>
           <br><input type="checkbox" name="major[]" value="Biological Sciences BA" >Biological Sciences BA<br>
           <input type="checkbox" name="major[]" value="Biological Sciences BS" >Biological Sciences BS<br>
-          <input type="checkbox" name="major[]" value="Biochemistry & Molecular Biology BS" >Biochemistry & Molecular Biology BS<br>
-          <input type="checkbox" name="major[]" value="Bioinformatics & Computational Biology BS" >Bioinformatics & Computational Biology BS<br>
+          <input type="checkbox" name="major[]" value="Biochemistry &amp; Molecular Biology BS" >Biochemistry &amp; Molecular Biology BS<br>
+          <input type="checkbox" name="major[]" value="Bioinformatics &amp; Computational Biology BS" >Bioinformatics &amp; Computational Biology BS<br>
 
           <input type="checkbox" name="major[]" value="Biology Education BA" >Biology Education BA<br>
           <input type="checkbox" name="major[]" value="Chemistry BA" >Chemistry BA<br>

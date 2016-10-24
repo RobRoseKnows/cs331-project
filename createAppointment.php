@@ -1,7 +1,17 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Robert
+ * Created by: Robert
  * Date: 10/23/2016
- * Time: 9:04 PM
  */
+
+    $title = "Create Appointment Block";
+    require("header.php");
+
+?>
+
+<div>
+<h1>Schedule Appointment Times</h1>
+
+
+
+</div>
