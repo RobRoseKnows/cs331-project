@@ -6,7 +6,7 @@
       <div id="form">
         <div class="top">
 		    <h1>Schedule Individual Appointments</h1>
-        <form action="./processIndApp.php" method="post" name="Confirm">
+        <form action="logic/processIndApp.php" method="post" name="Confirm">
 	    <div class="field">
 	      <label for="Date">Date</label>
 
@@ -67,10 +67,10 @@
 	</div>
 	</div>
 	</form>
+      </div>
 	<form method="link" action="advisorHome.php" name="home">
 		<input type="submit" name="next" class="button large go" value="Return to Home">
 	</form>
-
-  </body>
-  
-</html>
+<?php
+    require("footer.php");
+?>

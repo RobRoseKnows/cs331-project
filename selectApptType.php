@@ -2,7 +2,6 @@
 	$title = "Select Advising Type";
 	require("./header.php");
 ?>
-  <body>
     <div id="login">
       <div id="form">
         <div class="top">
@@ -15,15 +14,14 @@
 		<input type="submit" name="type" class="button large go" value="Individual">
 		<input type="submit" name="type" class="button large go" value="Group" style="float: right;">
 	    </div>
-		</div>
 		</form>
 
 
-<br>
-<br>
+<br />
+<br />
 		<div>
 		<!--Home buttons for the weary traveler-->
-		<form method="link" action="02StudHome.php">
+		<form method="post" action="StudentHome.php">
 		<input type="submit" name="home" class="button large" value="Cancel">
 		</form>
 		</div>

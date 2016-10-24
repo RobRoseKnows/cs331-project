@@ -5,7 +5,7 @@
 
 	<div class="container main">
 	<div id="nav">
-		<form action="./processAdvisorHomepage.php" method="post" name="Home">
+		<form action="redirects/redirectAdvisorHomepage.php" method="post" name="Home">
 	  
 			<input type="submit" name="next" class="button main selection" value="Schedule appointments"><br>
 			<input type="submit" name="next" class="button main selection" value="Print schedule for a day"><br>

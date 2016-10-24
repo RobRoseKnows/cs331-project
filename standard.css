@@ -1,6 +1,6 @@
 html{ 
 		background-color: #FFFFFF; 
-		font-family: Calibri; 
+		font-family: Calibri, sans-serif;
 		font-size: 25px; 
 		position: relative; 
 	}
@@ -194,7 +194,7 @@ html{
 		padding: 0px;
 		margin: 5px 10px;
 		vertical-align: bottom;
-		horizontal-align: center;
+		horiz-align: center;
 	}
 	
 	h5{
@@ -247,9 +247,9 @@ html{
 		position: relative;
 	}
 	
-	app_type_buttons {
-		vertical-align: center;
-	}
+	/*app_type_buttons {
+		/*vertical-align: center;
+	}*/
 
 	.button {
 		background-color: #768089;
@@ -324,7 +324,7 @@ html{
 	
 	.button.logout{
 		background-color: #FF0000;
-		float: center;
+		/*float: center;*/
 		margin-top: 10px;
 		margin-right: 50%;
 		margin-left: 50%;

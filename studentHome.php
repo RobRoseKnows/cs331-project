@@ -4,7 +4,7 @@
 ?>
 	<div class="container main">
 	<div id="nav">
-		<form action="processStudentHomepage.php" method="post" name="Home">
+		<form action="redirects/redirectStudentHomepage.php" method="post" name="Home">
 		<?php
 
 			echo "<button type='submit' name='selection' class='button main selection' value='View'>View my appointment</button><br>";

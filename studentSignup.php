@@ -3,7 +3,7 @@ $title = "Student Sign Up";
 require("header.php");
 ?>
 
-<form action='doStudentSignUp.php' method='post' name='studentSignUp'>
+<form action='logic/doStudentSignUp.php' method='post' name='studentSignUp'>
     <label for='studEmail'>Email: </label>
     <input type='text' id='studEmail' name='studEmail' pattern=<?php echo("'$umbcEmailPattern'"); ?> required placeholder='example@umbc.edu'> <br>
 

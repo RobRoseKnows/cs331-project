@@ -3,7 +3,7 @@ $title = "Student Sign In";
 require("header.php");
 ?>
 
-<form action='doStudentLogin.php' method='post' name='studentLogin'>
+<form action='logic/doStudentLogin.php' method='post' name='studentLogin'>
 
    <label for='studIdNum'>Id Number: </label>
      <input type='text' id='studIdNum' name='studIdNum' pattern=<?php echo("'$umbcIdPattern'"); ?> required> <br>

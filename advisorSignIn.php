@@ -3,7 +3,7 @@
   require("./header.php");
 ?>
 
-<form action='./doAdvisorLogin.php' method='post' name='advisorLogin'>
+<form action='logic/doAdvisorLogin.php' method='post' name='advisorLogin'>
 
    <label for='advIdNum'>Id Number: </label>
      <input type='text' id='advIdNum' name='advIdNum' pattern=<?php echo("'$umbcIdPattern'"); ?> required> <br>

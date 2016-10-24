@@ -14,27 +14,28 @@
 
 	      <input id="Date" type="date" name="Date" placeholder="mm/dd/yyyy" min="2016-10-15" max="2017-6-30" required autofocus> (mm/dd/yyyy)
 	    </div>
+            </div>
 
       <div class="field">
         <label for="Time">Times</label><br>
 
 	<!--all possible time slots-->
-        <input type="checkbox" name="time[]" value="08:00:00"> 8:00AM - 8:30AM <br>
-        <input type="checkbox" name="time[]" value="08:30:00"> 8:30AM - 9:00AM <br>
-        <input type="checkbox" name="time[]" value="09:00:00"> 9:00AM - 9:30AM <br>
-        <input type="checkbox" name="time[]" value="09:30:00"> 9:30AM - 10:00AM <br>
-        <input type="checkbox" name="time[]" value="10:00:00"> 10:00AM - 10:30AM <br>
-        <input type="checkbox" name="time[]" value="10:30:00"> 10:30AM - 11:00AM <br> 
-        <input type="checkbox" name="time[]" value="11:00:00"> 11:00AM - 11:30AM <br>
-        <input type="checkbox" name="time[]" value="11:30:00"> 11:30AM - 12:00PM <br>
-        <input type="checkbox" name="time[]" value="12:00:00"> 12:00PM - 12:30PM <br>
-        <input type="checkbox" name="time[]" value="12:30:00"> 12:30PM - 1:00PM <br>
-        <input type="checkbox" name="time[]" value="13:00:00"> 1:00PM - 1:30PM <br>
-        <input type="checkbox" name="time[]" value="13:30:00"> 1:30PM - 2:00PM <br>
-        <input type="checkbox" name="time[]" value="14:00:00"> 2:00PM - 2:30PM <br>
-        <input type="checkbox" name="time[]" value="14:30:00"> 2:30PM - 3:00PM <br>
-        <input type="checkbox" name="time[]" value="15:00:00"> 3:00PM - 3:30PM <br>
-        <input type="checkbox" name="time[]" value="15:30:00"> 3:30PM - 4:00PM <br>
+        <input type="checkbox" name="time[]" value="0800"> 8:00AM - 8:30AM <br>
+        <input type="checkbox" name="time[]" value="0830"> 8:30AM - 9:00AM <br>
+        <input type="checkbox" name="time[]" value="0900"> 9:00AM - 9:30AM <br>
+        <input type="checkbox" name="time[]" value="0930"> 9:30AM - 10:00AM <br>
+        <input type="checkbox" name="time[]" value="1000"> 10:00AM - 10:30AM <br>
+        <input type="checkbox" name="time[]" value="1030"> 10:30AM - 11:00AM <br>
+        <input type="checkbox" name="time[]" value="1100"> 11:00AM - 11:30AM <br>
+        <input type="checkbox" name="time[]" value="1130"> 11:30AM - 12:00PM <br>
+        <input type="checkbox" name="time[]" value="1200"> 12:00PM - 12:30PM <br>
+        <input type="checkbox" name="time[]" value="1230"> 12:30PM - 1:00PM <br>
+        <input type="checkbox" name="time[]" value="1300"> 1:00PM - 1:30PM <br>
+        <input type="checkbox" name="time[]" value="1330"> 1:30PM - 2:00PM <br>
+        <input type="checkbox" name="time[]" value="1400"> 2:00PM - 2:30PM <br>
+        <input type="checkbox" name="time[]" value="1430"> 2:30PM - 3:00PM <br>
+        <input type="checkbox" name="time[]" value="1500"> 3:00PM - 3:30PM <br>
+        <input type="checkbox" name="time[]" value="1530"> 3:30PM - 4:00PM <br>
        
       </div>
 
@@ -76,6 +77,7 @@
 		<input type="submit" name="next" class="button large go" value="Create">
 	</div>
 	</div>
+    </div>
 	</form>
 		<form method="link" action="advisorHome.php" name="home">
 			<input type="submit" name="next" class="button large" value="Return to Home">

@@ -4,8 +4,8 @@ session_start();
 $debug = true;
 
 // You have to initialize Common on your own.
-include('./CommonMethods.php');
-include('./CommonVariables.php');
+include('includes/CommonMethods.php');
+include('includes/CommonVariables.php');
 
 if($title == null) {
   $title = "Student Advising Scheduler";
@@ -18,7 +18,7 @@ if($title == null) {
     
     <meta charset="UTF-8" />
     <link rel='stylesheet' type='text/css' href='./standard.css'/>
-    <title><?php echo $title;?>
+    <title><?php echo $title;?></title>
     
   </head>
 <body>

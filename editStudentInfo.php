@@ -27,7 +27,7 @@ while($row = mysql_fetch_row($rs)){
 	<!--Displays previously parsed information-->
 			<div class="top">
 			<h2>Edit Student Information<span class="login-create"></span></h2>
-			<form action="./processStudentEdit.php" method="post" name="Edit">
+			<form action="logic/processStudentEdit.php" method="post" name="Edit">
 			<div class="field">
 				<label for="firstName">First Name</label>
 				<input id="firstName" size="30" maxlength="50" type="text" name="firstName" required value=<?php echo $_SESSION["firstName"]?>>

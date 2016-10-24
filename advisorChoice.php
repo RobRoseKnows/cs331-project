@@ -11,7 +11,7 @@
     <div id="login">
       <div id="form">
         <div class="top">
-        <form method="link" action="./advisorSignup.php">
+        <form method="post" action="./advisorSignup.php">
 	<input type="submit" name="next" class="button large go" value="Advisor Sign Up">
 	</form>
 	

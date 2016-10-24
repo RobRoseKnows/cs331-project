@@ -2,8 +2,6 @@
 	$title = "Schedule Appointment";
 	require('./header.php');
 ?>
-
-  <body>
     <div id="login">
       <div id="form">
         <div class="top">
@@ -20,18 +18,12 @@
 	<div class="nextButton">
 		<input type="submit" name="next" class="button large go" value="Group" style="float: center;">
 	</div>
-	</form>
-
-
-
-        </div>
-	</div>
-		</form>
-		<form method="link" action="advisorHome.php">
-		<input type="submit" name="home" class="button large" value="Home">
+	</form><form method="link" action="advisorHome.php">
+			<input type="submit" name="home" class="button large" value="Home">
 		</form>
    	</div>
 	</div>
+		</div>
 
 <?php
 	require("./footer.php");

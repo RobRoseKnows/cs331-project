@@ -3,7 +3,7 @@
   require("./header.php");
 ?>
 
-<form action='./doAppointmentSignUp.php' method='post' name='appointmentSignUp'>
+<form action='logic/doAppointmentSignUp.php' method='post' name='appointmentSignUp'>
 <!-- Type, Location, Time, Day, Major -->
 
   <label for='datePicker'>Lookup Date: </label>
