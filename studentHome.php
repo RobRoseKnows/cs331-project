@@ -7,6 +7,7 @@
 		<form action="redirects/redirectStudentHomepage.php" method="post" name="Home">
 		<?php
 
+			//options the student has from their homepage
 			echo "<button type='submit' name='selection' class='button main selection' value='View'>View my appointment</button><br>";
 			echo "<button type='submit' name='selection' class='button main selection' value='Reschedule'>Reschedule my appointment</button><br>";
 			echo "<button type='submit' name='selection' class='button main selection' value='Cancel'>Cancel my appointment</button><br>";
@@ -18,6 +19,7 @@
 	<div id="section">
 		
 
+		<!--welcome message to user-->
 		<h1><?php echo "Welcome, {$_SESSION['SIDNumber']}!";  ?> </h1>
 
 	</div>
