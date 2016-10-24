@@ -4,6 +4,7 @@ require("header.php");
 ?>
 
 <form action='logic/doStudentRegister.php' method='post' name='studentSignUp'>
+    <!--collects information from student necessary to populate database-->
     <label for='studEmail'>Email: </label>
     <input type='text' id='studEmail' name='studEmail' pattern=<?php echo("'$umbcEmailPattern'"); ?> required placeholder='example@umbc.edu'> <br>
 
@@ -20,8 +21,8 @@ require("header.php");
     <select name='major'>
         <option value='BioBA'>Biological Sciences BA</option>
         <option value='BioBS'>Biological Sciences BS</option>
-        <option value='Biochem'>Biochemisty & Molecular Biology BS</option>
-        <option value='Bioinfo'>Bioinformatics & Computational Biology BS</option>
+        <option value='Biochem'>Biochemisty &amp; Molecular Biology BS</option>
+        <option value='Bioinfo'>Bioinformatics &amp; Computational Biology BS</option>
         <option value='Bioed'>Biology Education BA</option>
         <option value='ChemBA'>Chemistry BA</option>
         <option value='ChemBS'>Chemistry BS</option>
@@ -31,6 +32,7 @@ require("header.php");
   <label for='password'>Password: </label>
     <input type='password' id='password' name='password' required> <br>
 
+  <!--prompts student to re-enter their password to verify that it matches on logic page-->
   <label for='rePassword'>Retype Password: </label>
     <input type='password' id='rePassword' name='rePassword' required> <br>
 
