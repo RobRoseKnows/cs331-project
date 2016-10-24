@@ -5,15 +5,12 @@
 
 	<div class="container main">
 	<div id="nav">
-		<form action="redirects/redirectAdvisorHomepage.php" method="post" name="Home">
-	  
-			<input type="submit" name="next" class="button main selection" value="Schedule appointments"><br>
-			<input type="submit" name="next" class="button main selection" value="Print schedule for a day"><br>
-			<input type="submit" name="next" class="button main selection" value="Edit appointments"><br>
-			<input type="submit" name="next" class="button main selection" value="Search for an appointment"><br>
-			<input type="submit" name="next" class="button main selection" value="Create new Admin Account"><br>
-		
-		</form>
+        <nav class="action-options">
+            <a href="createAppointment.php">Schedule an appointment</a>
+            <a href="viewSchedule.php">View Schedule</a>
+            <a href="findAppointment.php">Search for an appointment</a>
+            <a href="advisorSignup.php">Create new Advisor Account</a>
+        </nav>
 	</div>
 	<div id="section">
 		<h1><?php echo "Welcome, {$_SESSION['ADVIDNumber']}!";  ?> </h1>

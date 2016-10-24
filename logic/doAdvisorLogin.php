@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include('CommonMethods.php');
+include('../includes/CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug);
 
@@ -31,7 +31,7 @@ if($num_rows == 1){
 //otherwise, password is incorrect, route user back to login screen
 else{
 
-  header('Location: advisorSignIn.php');
+  header('Location: advisorLogin.php');
 }
 
 

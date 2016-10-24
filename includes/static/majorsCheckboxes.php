@@ -1,13 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Robert
- * Date: 10/24/2016
- * Time: 5:14 PM
- */
-
-?>
-
 <label><input type="checkbox" name="major[]" value="Bio_Sci_BA" > Biological Sciences BA</label>
 <label><input type="checkbox" name="major[]" value="Bio_Sci_BS" > Biological Sciences BS</label>
 <label><input type="checkbox" name="major[]" value="Biochem_BS" > Biochemistry &amp; Molecular Biology BS</label>

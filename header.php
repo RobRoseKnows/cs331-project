@@ -4,8 +4,8 @@ session_start();
 $debug = true;
 
 // You have to initialize Common on your own.
-include_once('includes/CommonMethods.php');
-include_once('includes/CommonVariables.php');
+include('includes/CommonMethods.php');
+include('includes/CommonVariables.php');
 
 if($title == null) {
   $title = "Student Advising Scheduler";

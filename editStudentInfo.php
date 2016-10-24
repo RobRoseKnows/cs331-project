@@ -42,7 +42,7 @@ while($row = mysql_fetch_row($rs)){
                 </div>
                 <div class="field">
                     <label for="major">Major</label>
-                    <?php include("includes/majorsSelect.php"); ?>
+                    <?php include("includes/static/majorsSelect.php"); ?>
                 </div>
                 <div class="nextButton">
                     <input type="submit" name="save" class="button large go" value="Save">

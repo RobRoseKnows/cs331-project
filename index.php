@@ -3,22 +3,13 @@
 ?>
    <h1> UMBC SIGN IN</h1>
 <!--appropriate login page buttons-->
-    <div id="login">
-      <div id="form">
-        <div class="top">
-        <form method="link" action="./studentChoice.php">
-   <input type="submit" name="next" class="button large go" value="Student Sign In">
-   </form>
+    <nav>
 
-   <br />
-   <br />
+        <a href="advisorLogin.php"></a>
 
-   <form method="link" action="./advisorChoice.php">
-   <input type="submit" name="next" class="button large go" value="Advisor Sign In">
-   </form>
+   </nav>
 
-        </div>
-   </div>
+
 
 <?php
   require("footer.php");

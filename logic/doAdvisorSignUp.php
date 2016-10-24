@@ -1,6 +1,6 @@
 <?php
 
-include('CommonMethods.php');
+include('../includes/CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug);
 

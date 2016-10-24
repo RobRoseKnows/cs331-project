@@ -1,4 +1,4 @@
-<select id="major" name = "major">
+<select id="major" name = "major" id="majorSelect">
     <option <?php if($_SESSION["major"] == 'Bio_Sci_BA'){echo("selected");}?> value="Bio_Sci_BA">Biological Sciences BA</option>
     <option <?php if($_SESSION["major"] == 'Bio_Sci_BS'){echo("selected");}?> value="Bio_Sci_BS">Biological Sciences BS</option>
     <option <?php if($_SESSION["major"] == 'Biochem_BS'){echo("selected");}?> value="Biochem_BS">Biochemistry and Molecular Biology BS</option>

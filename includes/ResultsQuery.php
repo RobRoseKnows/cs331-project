@@ -25,8 +25,8 @@ class SearchingClass
 
             $clause = ") AND ( WHERE ";
 
-            if (isset($dict["times"])) {
-                $times = $dict["times"];
+            if (isset($dict["time"])) {
+                $times = $dict["time"];
 
                 foreach ($times as $time) {
                     $query .= $clause . "`TimeSlot` = '$time'";

@@ -11,35 +11,36 @@ require("./header.php");
 
             <form action="processGroupApp.php" method="post" name="Confirm">
                 <div class="field">
-                    <label for="Date">Date</label>
-
 
                     <input id="Date" type="date" name="Date" placeholder="mm-dd-yyyy" min="2016-10-15" max="2017-6-30" required autofocus> (mm-dd-yyyy)
-                </div>
-
-                <div class="field">
-                    <label for="Time">Times</label><br>
-
-                    <!--all possible time slots-->
-
-                    <?php include("includes/timeDropDown.php"); // This is so we can keep all of the drop down values coordinated.?>
 
                 </div>
 
                 <div class="field">
 
-                    <?php include("includes/majorsDropDown.php"); // This keeps all the dropdown values coordinated ?>
+                    <h2>At Times:</h2><br>
+
+                    <?php include("includes/static/timeCheckboxes.php"); // This is so we can keep all of the drop down values coordinated.?>
 
                 </div>
 
+                <!-- What majors to accept -->
+                <div class="field">
+
+                    <h2>For Majors:</h2><br>
+
+                    <?php include("includes/static/majorsCheckboxes.php"); // This keeps all the dropdown values coordinated ?>
+
+                </div>
+
+                <!-- When to repeat the appointment. -->
                 <div class="field">
                     <!--repeat amounts-->
-                    <label for="Repeat">Repeat Weekly</label>
-                    <input type="checkbox" name="repeat[]" value="Monday">Monday
-                    <input type="checkbox" name="repeat[]" value="Tuesday">Tuesday
-                    <input type="checkbox" name="repeat[]" value="Wednesday">Wednesday
-                    <input type="checkbox" name="repeat[]" value="Thursday">Thursday
-                    <input type="checkbox" name="repeat[]" value="Friday">Friday
+                    <label><input type="checkbox" name="repeat[]" value="Monday">Monday</label>
+                    <label><input type="checkbox" name="repeat[]" value="Tuesday">Tuesday</label>
+                    <label><input type="checkbox" name="repeat[]" value="Wednesday">Wednesday</label>
+                    <label><input type="checkbox" name="repeat[]" value="Thursday">Thursday</label>
+                    <label><input type="checkbox" name="repeat[]" value="Friday">Friday</label>
                 </div>
 
 

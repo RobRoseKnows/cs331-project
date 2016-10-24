@@ -12,6 +12,8 @@ if(isset($_GET['datePicker'])) {
 
     $dict = $_GET;
 
+
+
     ?>
 
     <?php
