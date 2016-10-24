@@ -4,9 +4,11 @@ require("header.php");
 ?>
 
 <form action='logic/doAdvisorRegister.php' method='post' name='advisorSignUp'>
+    <!--get email from advisor-->
     <label for='advEmail'>Email: </label>
     <input type='email' id='advEmail' pattern=<?php echo("'$umbcEmailPattern'"); ?> required placeholder='example@umbc.edu'> <br>
 
+  <!--get advisor's title-->
   <label for='advTitle'>Title: </label>
     <select name='advTitle'>
         <option value='dr'>Dr.</option>
@@ -15,6 +17,7 @@ require("header.php");
         <option value='ms'>Ms.</option>
     </select> <br>
 
+  <!--collect other information from advisor necessary to populate database-->
   <label for='advIdNum'>Id Number: </label>
     <input type='text' id='advIdNum' name='advIdNum' pattern=<?php echo("'$umbcIdPattern'"); ?> required> <br>
 
@@ -30,6 +33,7 @@ require("header.php");
   <label for='password'>Password: </label>
     <input type='password' id='password' name='password' required> <br>
 
+  <!--have advisor re-enter password to ensure they match (done on logic page)-->
   <label for='rePassword'>Retype Password: </label>
     <input type='password' id='rePassword' name='rePassword' required> <br>
 
