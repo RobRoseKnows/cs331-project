@@ -1,5 +1,5 @@
 <?php
-	$title = "Student Advising Home";
+	$title = "Advisor Home";
 	include('header.php');
 ?>
 
@@ -11,7 +11,7 @@
 			<input type="submit" name="next" class="button main selection" value="Print schedule for a day"><br>
 			<input type="submit" name="next" class="button main selection" value="Edit appointments"><br>
 			<input type="submit" name="next" class="button main selection" value="Search for an appointment"><br>
-			<input type="submit" name="next" class="button main selection" value="Create new Admin Account"><br>
+			<input type="submit" name="next" class="button main selection" value="Create new Advisor Account"><br>
 		
 		</form>
 	</div>
