@@ -1,6 +1,10 @@
 <?php
 $title = "Advisor Sign Up";
+$debug = false;
 require("header.php");
+require "includes/CommonMethods.php";
+$COMMON = new Common($debug);
+
 ?>
 
 <form action='logic/doAdvisorRegister.php' method='post' name='advisorSignUp'>
@@ -37,7 +41,8 @@ require("header.php");
   <label for='rePassword'>Retype Password: </label>
     <input type='password' id='rePassword' name='rePassword' required> <br>
 
-  <input type='submit'>
+    <? //This ternary statement tries to prevent a non-advisor from creating an advisor. ?>
+  <input type='submit' <?php echo(!$COMMON->isAdvisor($_SESSION["ADVIDNumber"]) ? "disabled" : "")?>>
 
 </form>
 

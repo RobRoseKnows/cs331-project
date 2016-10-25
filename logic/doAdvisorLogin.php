@@ -8,20 +8,11 @@ $COMMON = new Common($debug);
 //store both the id number and password given
 $advIdNum = ($_POST['advIdNum']);
 $password = ($_POST['password']);
-$truePassword = md5($password);
 
-$_SESSION['ADVIDNumber'] = ($_POST['advIdNum']);
-
-
-
-$sql = "SELECT * FROM `Advisor Data` WHERE `StudentID` = '$advIdNum' AND `Password` = '$truePassword'";
-
-//determine how many matches the password has for that ID in the database
-$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-$num_rows = mysql_num_rows($rs);
+// I moved the password checking code to Common.
 
 //if only one match, password correct
-if($num_rows == 1){
+if($COMMON->isCorrectPassword($advIdNum, $password, false)){
 
   //allow user to access their homepage
   echo("correct!!");

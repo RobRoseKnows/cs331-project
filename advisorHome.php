@@ -9,7 +9,7 @@
             <a href="createAppointment.php">Schedule an appointment</a>
             <a href="viewSchedule.php">View Schedule</a>
             <a href="findAppointment.php">Search for an appointment</a>
-            <a href="advisorSignup.php">Create new Advisor Account</a>
+            <a href="advisorRegister.php">Create new Advisor Account</a>
         </nav>
 	</div>
 	<div id="section">

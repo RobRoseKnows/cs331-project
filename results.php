@@ -4,6 +4,7 @@ $title="Appointment Search Results";
 $debug=false;
 require("./header.php");
 require("includes/ResultsQuery.php");
+require "includes/CommonMethods.php";
 
 
 if(isset($_GET['datePicker'])) {
@@ -11,23 +12,35 @@ if(isset($_GET['datePicker'])) {
     $dict = $_GET;
     $result = $SEARCH->searchFor($dict);
 
+    // I realize this is a less desirable form, but it's the easiest to work with all the conditionals.
     echo("<h1>Search Results</h1>");
     echo("<h2>".$SEARCH->echoTerms($dict)."</h2>");
 
-    if($result->num_rows > 0) {
+    if(mysql_num_rows($result) > 0) {
         ?>
         <h3>Results:</h3>
         <form action="logic/doAppointmentSignUp.php" method="post" name="appointmentSignUp">
 
             <?php
 
-            foreach ($result as $row) {
+            $resultArr = mysql_fetch_array($result);
+            foreach ($resultArr as $row) {
                 echo($SEARCH->lineForRow($row));
             }
 
+            $COMMON = new Common($debug);
+
+            if($COMMON->isStudent($_SESSION["sid"])) {
+                // THis allows a student to setup an appointment to see an advisor.
+                echo("<input type='submit' name='next' value='Sign Up'>");
+            } else if($COMMON->isAdvisor($_SESSION["sid"])){
+                // This allows an advisor to delete an appointment from their schedule.
+                echo("<input type='submit' name='next' value='Delete Appointment'>");
+            }
             ?>
 
-            <input type="submit" name="submit" value="submit">
+            <br>
+            <a href="findAppointment.php">Search Again</a>
 
         </form>
 
