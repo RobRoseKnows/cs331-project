@@ -1,5 +1,5 @@
 <?php
-include('CommonMethods.php');
+include('../includes/CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug);
 //if the passwords given both match, create a new student

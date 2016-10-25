@@ -1,14 +1,9 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-	<link rel='stylesheet' type='text/css' href='standard.css'/>
-  </head>
-  <div id="footer">
-	 <!--logout button to end the user's session--> 
-	<form action="Logout.php" method="post" name="Logout">
-	<div class="logoutButton">
-		<input type="submit" name="logout" class="button large logout" value="Logout">
-	</div>
-	</form>
-  </div>
+    <div id="footer">
+	    <form action="logout.php" method="post" name="Logout">
+	        <div class="logoutButton">
+		        <input type="submit" name="logout" class="button large logout" value="Logout">
+	        </div>
+	    </form>
+    </div>
+  </body>
  </html>

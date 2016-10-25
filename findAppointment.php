@@ -1,16 +1,33 @@
 <?php
-  $title = "Appointment Sign Up";
-  require("./header.php");
+$title = "Appointment Search";
+require("header.php");
 ?>
 
-<form action='logic/doAppointmentSignUp.php' method='post' name='appointmentSignUp'>
-<!-- Type, Location, Time, Day, Major -->
+  <form action='results.php' method='get' name='appointmentSearch'>
+    <!-- Type, Location, Time, Day, Major -->
+    <h1>Search for an appointment</h1>
 
-  <label for='datePicker'>Lookup Date: </label>
-  <input type='text' id='datePicker' name='datePicker' pattern='^(0[1-9]|1[012])[-](0[1-9]|[12][0-9]|3[01])[-](19|20)\d\d' required placeholder='10/21/2015'> <br>
-  
-  <input type='submit'>
-</form>
+    <label for='datePicker'>Date: </label>
+    <input type='text' id='datePicker' name='datePicker' pattern=<?php echo("'$datePattern'"); ?> required placeholder='10/21/2015'> <br>
+
+    <div>
+      <h3>Time: </h3>
+      <?php include("includes/static/timeCheckboxes.php"); ?>
+    </div>
+
+    <div>
+      <h3>Major: </h3>
+      <?php include("includes/static/majorsSelect.php"); ?>
+    </div>
+
+    <!-- Need: datePicker, individual, times, major, onlyOpen-->
+    <label><input type="checkbox" id="onlyOpen" name="onlyOpen"> Show me only open sessions</label>
+
+    <label><input type="checkbox" id="individual" name="individual"> Show me individual sessions only</label>
+
+    <input type='submit'>
+  </form>
+
 <?php
-  require("./footer.php");
+require("./footer.php");
 ?>

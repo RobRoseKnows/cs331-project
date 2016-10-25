@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('CommonMethods.php');
+include('../includes/CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug);
 
@@ -32,7 +32,7 @@ else{
 
 echo(".md5($password).");
 
-  header('Location: studentSignIn.php');
+  header('Location: studentLogin.php');
 }
 
 

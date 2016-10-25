@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include('CommonMethods.php');
+include('../includes/CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug);
 

@@ -15,7 +15,7 @@ $major = $_POST["major"];
 $sid = $_SESSION["SIDNumber"];
 
 $debug = false;
-include('./CommonMethods.php');
+include('../includes/CommonMethods.php');
 $COMMON = new Common($debug);
 	$sql = "update `Student Data` set `FirstName` = '$firstn', `LastName` = '$lastn', `Email` = '$email', `Major` = '$major' where `StudentID` = '$sid'";
 	$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
