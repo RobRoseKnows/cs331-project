@@ -18,8 +18,14 @@ $num_rows = mysql_num_rows($rs);
 //if only one match, password correct
 if($num_rows == 1){
 
-  //allow user to access their homepage
-  echo("correct!!");
+  $apptId = $_POST["appointment"];
+
+  $appointmentQuery = "SELECT * FROM `Appoinment` WHERE `ID` = '$apptId'";
+  $appointmentResult = $COMMON->executeQuery($appointmentQuery, $_SERVER["SCRIPT_NAME"]);
+
+  if(mysql_num_rows($appointmentResult) == 1) {
+
+  }
 }
 
 //otherwise, password is incorrect, route user back to login screen

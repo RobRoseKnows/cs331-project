@@ -1,6 +1,6 @@
 <?php
 
-include_once("../includes/CommonMethods.php");
+include("../includes/CommonMethods.php");
 
 class SearchingClass
 {
@@ -11,6 +11,8 @@ class SearchingClass
         $this->DEBUG = $debug;
         $this->COMMON = new Common($debug);
     }
+
+
 
     function searchFor($dict)
     {
@@ -28,31 +30,35 @@ class SearchingClass
             if (isset($dict["time"])) {
                 $times = $dict["time"];
                 foreach ($times as $time) {
-                    $query .= $clause . "`TimeSlot` = '$time'";
+                    $query .= "$clause `TimeSlot` = '$time'";
                     $clause = " OR ";
                 }
             }
 
+            $clause = ") AND ( WHERE ";
+
             if (isset($dict["major"])) {
                 $major = $dict["major"];
 
-                $query .= $clause." `Major` LIKE '%$major%'";
+                $query .= "$clause `Major` LIKE '%$major%'";
             }
 
             if (isset($dict["individual"])) {
-                $query .= $clause." `maxStudents` = 1";
+                $query .= "$clause `maxStudents` = 1";
             } else {
-                $query .= $clause . " `maxStudents` > 1";
+                $query .= "$clause `maxStudents` > 1";
             }
 
             if(isset($dict["onlyOpen"])) {
-                $query .= $clause." `numStudents` < `maxStudents`";
+                $query .= "$clause `numStudents` < `maxStudents`";
             }
 
             $query .= " ) SORT BY `TimeSlot` ASC";
             return $this->COMMON->executeQuery($query, $_SERVER["SCRIPT_NAME"]);
         }
     }
+
+
 
     function lineForRow($row) {
         $apptId = $row["ID"];
@@ -68,9 +74,9 @@ class SearchingClass
         // If there are no slots left in an advising session, disable this option.
         $inputTag = "";
         if ($slotsLeft > 0) {
-            $inputTag = "<input type='radio' name='$nameIdInput' id='$nameIdInput' value='$apptId'>";
+            $inputTag = "<input type='radio' name='appointment' id='$nameIdInput' value='$apptId'>";
         } else {
-            $inputTag = "<input type='radio' name='$nameIdInput' id='$nameIdInput' value='$apptId' disabled>";
+            $inputTag = "<input type='radio' name='appointment' id='$nameIdInput' value='$apptId' disabled>";
         }
 
         $labelOpenTag = "<label for='$nameIdInput'>";
@@ -87,8 +93,49 @@ class SearchingClass
         $lineEnd = "<br>";
 
         // This puts all of the elements together and then returns it as a string.
-        $finalOutput = $inputTag."".$labelOpenTag."".$label."".$labelCloseTag."".$lineEnd;
+        $finalOutput = $labelOpenTag."".$inputTag."".$label."".$labelCloseTag."".$lineEnd;
         return $finalOutput;
+    }
+
+
+
+    function echoTerms($dict) {
+        $title = "Search for ";
+
+        if(isset($dict["onlyOpen"])) {
+            $title .= "open ";
+        } else {
+            $title .= "all ";
+        }
+
+        if (isset($dict["individual"])) {
+            $title .= "individual appointments ";
+        } else {
+            $title .= "group appointments ";
+        }
+
+        if(isset($dict["datePicker"])) {
+            $title .= "on: ".$dict["datePicker"];
+        }
+
+        if (isset($dict["time"])) {
+            $times = $dict["time"];
+
+            $clause = " at: ";
+            foreach ($times as $time) {
+                $title .= $clause.$time;
+                $clause = "or ";
+            }
+        }
+
+        if (isset($dict["major"])) {
+            $major = $dict["major"];
+
+            $title .= " for $major majors";
+        }
+
+        return $title;
+
     }
 }
 ?>
