@@ -10,13 +10,13 @@ $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 //Fetch student info
 while($row = mysql_fetch_row($rs)){
-    if($row[1] == $_SESSION["SIDNumber"]){
+    if($row["StudentID"] == $_SESSION["SIDNumber"]){
 
-        $_SESSION["firstName"] = $row[2];
-        $_SESSION["lastName"] = $row[3];
-        $_SESSION["major"] = $row[6];
-        $_SESSION["studEmail"]=$row[7];
-        $_SESSION["SIDNumber"]=$row[1];
+        $_SESSION["firstName"] = $row["FirstName"];
+        $_SESSION["lastName"] = $row["LastName"];
+        $_SESSION["major"] = $row["Major"];
+        $_SESSION["studEmail"]=$row["Email"];
+        $_SESSION["SIDNumber"]=$row["StudentID"];
     }
 }
 

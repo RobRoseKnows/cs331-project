@@ -7,12 +7,11 @@ require("includes/ResultsQuery.php");
 
 
 if(isset($_GET['datePicker'])) {
-
     $SEARCH = new SearchingClass($debug);
-
     $dict = $_GET;
+    $result = $SEARCH->searchFor($dict);
 
-
+    if($result->num_rows)
 
     ?>
 

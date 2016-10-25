@@ -13,11 +13,17 @@ if(($_POST['password']) == ($_POST['rePassword'])){
   $password = ($_POST['password']);
   $office = ($_POST['office']);
 
-  $sql = "insert into `Advisor Data` (`ID`, `StudentID`, `FirstName`, `LastName`,`Password`, `Office`) values (NULL, '$advIdNum', '$fName', '$lName','".md5($password)."','$office')";
+  $checkQuery = "SELECT * FROM `Advisor Data` WHERE `StudentID` = '$advIdNum'";
+  $checkResults = $COMMON->executeQuery($checkQuery, $_SERVER["SCRIPT_NAME"]);
 
-  $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
-header('Location: index.html');
+  if($checkResults->num_rows > 0) {
+    header('Location: advisorRegister.php');
+  } else {
+    $sql = "insert into `Advisor Data` (`ID`, `StudentID`, `FirstName`, `LastName`,`Password`, `Office`) values (NULL, '$advIdNum', '$fName', '$lName','" . md5($password) . "','$office')";
 
+    $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+    header('Location: index.php');
+  }
 }
 
 //otherwise, the passwords do not match and the user must be re-prompted
