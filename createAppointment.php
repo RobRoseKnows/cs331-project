@@ -33,20 +33,15 @@ require("./header.php");
 
                 </div>
 
-                <!-- When to repeat the appointment. -->
-                <div class="field">
-                    <!--repeat amounts-->
-                    <label><input type="checkbox" name="repeat[]" value="Monday">Monday</label>
-                    <label><input type="checkbox" name="repeat[]" value="Tuesday">Tuesday</label>
-                    <label><input type="checkbox" name="repeat[]" value="Wednesday">Wednesday</label>
-                    <label><input type="checkbox" name="repeat[]" value="Thursday">Thursday</label>
-                    <label><input type="checkbox" name="repeat[]" value="Friday">Friday</label>
-                </div>
-
-
                 <div class="field">
                     <label>Student limit:
                         <input type="number" id="studentLimit" name="studentLimit" min="1" max="10" value="10" />
+                    </label>
+                </div>
+                
+                <div class="field">
+                    <label>Location:
+                        <input type="text" id="location" name="location"/>
                     </label>
                 </div>
 
