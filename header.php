@@ -14,11 +14,11 @@ if($title == null) {
 ?><!DOCTYPE html>
 
 <html lang="en">
-  <head>
+    <head>
+        
+        <meta charset="UTF-8" />
+        <link rel='stylesheet' type='text/css' href='./standard.css'/>
+        <title><?php echo $title;?></title>
     
-    <meta charset="UTF-8" />
-    <link rel='stylesheet' type='text/css' href='./standard.css'/>
-    <title><?php echo $title;?></title>
-    
-  </head>
-<body>
+    </head>
+    <body>

@@ -8,7 +8,7 @@
         <nav class="action-options">
             <a href="createAppointment.php">Schedule an appointment</a>
             <a href="viewSchedule.php">View Schedule</a>
-            <a href="findAppointment.php">Search for an appointment</a>
+            <a href="findAppointment.php">Delete/Search for an appointment</a>
             <a href="advisorRegister.php">Create new Advisor Account</a>
         </nav>
 	</div>

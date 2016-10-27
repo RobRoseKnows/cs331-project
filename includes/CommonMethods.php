@@ -53,6 +53,17 @@ class Common
         }
     }
 
+    function isAppointment($aid) {
+        $sql = "SELECT * FROM `Appoinment` WHERE `ID` = $aid";
+        $rs = $this->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+
+        if (mysql_num_rows($rs) == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function isCorrectPassword($sid, $password, $forStudent) {
         if($forStudent) {
             $sql = "SELECT * FROM `Student Data` WHERE `StudentID` = '$sid' AND `Password` = '" . md5($password) . "'";
