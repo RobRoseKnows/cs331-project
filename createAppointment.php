@@ -9,7 +9,7 @@ require("./header.php");
         <div class="top">
             <h1>Create Appointment Slots</h1>
 
-            <form action="processGroupApp.php" method="post" name="Confirm">
+            <form action="logic/doCreateAppointment.php" method="post" name="Confirm">
                 <div class="field">
 
                     <input id="Date" type="date" name="Date" placeholder="mm-dd-yyyy" min="2016-10-15" max="2017-6-30" required autofocus> (mm-dd-yyyy)

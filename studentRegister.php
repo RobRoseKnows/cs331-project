@@ -17,17 +17,9 @@ require("./header.php");
   <label for='lName'>Last Name: </label>
     <input type='text' id='lName' name='lName' required> <br>
 
-  <label for='major'>Major: </label>
-    <select name='major'>
-        <option value='BioBA'>Biological Sciences BA</option>
-        <option value='BioBS'>Biological Sciences BS</option>
-        <option value='Biochem'>Biochemisty &amp; Molecular Biology BS</option>
-        <option value='Bioinfo'>Bioinformatics &amp; Computational Biology BS</option>
-        <option value='Bioed'>Biology Education BA</option>
-        <option value='ChemBA'>Chemistry BA</option>
-        <option value='ChemBS'>Chemistry BS</option>
-        <option value='Chemed'>Chemistry Education BA</option>
-    </select> <br>
+  <label for='major'>Major:
+    <?php include("./includes/static/majorsSelect.php"); ?>
+  </label>
 
   <label for='password'>Password: </label>
     <input type='password' id='password' name='password' required> <br>

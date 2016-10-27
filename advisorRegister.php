@@ -3,7 +3,7 @@ $title = "Advisor Sign Up";
 $debug = false;
 require("./header.php");
 require "includes/CommonMethods.php";
-$COMMON = new Common($debug);
+$COMMON = new CommonMethods($debug);
 
 ?>
 
@@ -14,7 +14,7 @@ $COMMON = new Common($debug);
 
   <!--get advisor's title-->
   <label for='advTitle'>Title: </label>
-    <select name='advTitle'>
+    <select id='advTitle' name='advTitle'>
         <option value='dr'>Dr.</option>
         <option value='miss'>Miss.</option>
         <option value='mr'>Mr.</option>

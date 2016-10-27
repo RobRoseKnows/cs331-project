@@ -28,7 +28,7 @@ if(isset($_GET['datePicker'])) {
                 echo($SEARCH->lineForRow($row));
             }
 
-            $COMMON = new Common($debug);
+            $COMMON = new CommonMethods($debug);
 
             if($COMMON->isStudent($_SESSION["sid"])) {
                 // THis allows a student to setup an appointment to see an advisor.

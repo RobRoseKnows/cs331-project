@@ -4,7 +4,6 @@ session_start();
 $debug = true;
 
 // You have to initialize Common on your own.
-include('includes/CommonMethods.php');
 include('includes/CommonVariables.php');
 
 if($title == null) {

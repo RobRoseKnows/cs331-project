@@ -15,10 +15,10 @@ $major = $_POST["major"];
 $sid = $_SESSION["SIDNumber"];
 
 $debug = false;
-include('../includes/CommonMethods.php');
-$COMMON = new Common($debug);
+include('../includes/QueryRunner.php');
+$RUNNER = new QueryRunner($debug);
 $sql = "update `Student Data` set `FirstName` = '$firstn', `LastName` = '$lastn', `Email` = '$email', `Major` = '$major' where `StudentID` = '$sid'";
-$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+$rs = $RUNNER->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
-header('Location: studentHome.php');
+header('Location: ../studentHome.php');
 ?>

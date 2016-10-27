@@ -1,18 +1,19 @@
 <?php
 
-include("../includes/CommonMethods.php");
+include("./CommonMethods.php");
+include("./QueryRunner.php");
 
 class SearchingClass
 {
     protected $COMMON;
     protected $DEBUG;
+    protected $RUNNER;
 
     function SearchingClass($debug) {
         $this->DEBUG = $debug;
-        $this->COMMON = new Common($debug);
+        $this->COMMON = new CommonMethods($debug);
+        $this->RUNNER = new QueryRunner($debug);
     }
-
-
 
     function searchFor($dict)
     {
@@ -54,7 +55,7 @@ class SearchingClass
             }
 
             $query .= " ) SORT BY `TimeSlot` ASC";
-            return $this->COMMON->executeQuery($query, $_SERVER["SCRIPT_NAME"]);
+            return $this->RUNNER->executeQuery($query, $_SERVER["SCRIPT_NAME"]);
         }
     }
 

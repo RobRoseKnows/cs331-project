@@ -15,5 +15,6 @@
 
 
 <?php
+
   require("footer.php");
 ?>

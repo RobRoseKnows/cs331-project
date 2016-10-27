@@ -1,5 +1,5 @@
 <?php
-$headerTitle = "Student Login";
+$title = "Student Login";
 require("./header.php");
 ?>
 

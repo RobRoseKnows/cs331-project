@@ -3,7 +3,7 @@ $title = "Edit Student";
 require("./header.php");
 
 $debug = true;
-$COMMON = new Common($debug);
+$COMMON = new CommonMethods($debug);
 
 $sessionSID = $_SESSION["SIDNumber"];
 
