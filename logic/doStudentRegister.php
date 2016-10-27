@@ -16,10 +16,10 @@ if(($_POST['password']) == ($_POST['rePassword'])) {
 
     // Check to make sure this student isn't in the system alreayd.
     if ($checkResults->num_rows > 0) {
-        header('Location: advisorRegister.php');
+        header('Location: studentRegister.php');
     } else {
 
-        $sql = "insert into `Student Data` (`ID`, `StudentID`, `FirstName`, `LastName`,`Password`, `ApptNum`,`Major`,`Email`) values (NULL, '$studIdNum', '$fName', '$lName', '" . md5($password) . "', NULL, '$major','$email')";
+        $sql = "insert into `Student Data` (`ID`, `StudentID`, `FirstName`, `LastName`,`Password`, `ApptNum`,`Major`,`Email`) values (NULL, '$studIdNum', '$fName', '$lName', '".md5($password)."', NULL, '$major','$email')";
         $rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
         header('Location: index.php');
