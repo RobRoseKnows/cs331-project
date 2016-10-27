@@ -1,5 +1,6 @@
 <?php
-  require("header.php");
+    $title = "Homepage";
+  require("./header.php");
 ?>
 <h1> UMBC SIGN IN</h1>
 <!--appropriate login page buttons-->

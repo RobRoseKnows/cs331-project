@@ -1,6 +1,6 @@
 <?php
 $title = "Student Sign Up";
-require("header.php");
+require("./header.php");
 ?>
 
 <form action='logic/doStudentRegister.php' method='post' name='studentSignUp'>

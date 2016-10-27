@@ -1,6 +1,6 @@
 <?php
 $headerTitle = "Student Login";
-require("header.php");
+require("./header.php");
 ?>
 
 <form action='logic/doStudentLogin.php' method='post' name='studentLogin'>

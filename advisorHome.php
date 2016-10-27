@@ -1,6 +1,6 @@
 <?php
 	$title = "Advisor Home";
-	include('header.php');
+	include('./header.php');
 ?>
 
 	<div class="container main">

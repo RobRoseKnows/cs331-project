@@ -1,6 +1,6 @@
 <?php
 $title = "Edit Student";
-require("header.php");
+require("./header.php");
 
 $debug = true;
 $COMMON = new Common($debug);

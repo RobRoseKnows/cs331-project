@@ -1,6 +1,6 @@
 <?php
 $title = "Appointment Search";
-require("header.php");
+require("./header.php");
 ?>
 
   <form action='results.php' method='get' name='appointmentSearch'>

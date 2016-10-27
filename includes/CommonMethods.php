@@ -26,8 +26,8 @@ class Common
 	function executeQuery($sql, $filename) // execute query
 	{
 		if($this->debug == true) { echo("$sql <br>\n"); }
-		$escaped = mysql_real_escape_string($sql);
-		$rs = mysql_query($escaped, $this->conn) or die("Could not execute query '$sql' in $filename");
+		$escaped = @mysql_real_escape_string($sql);
+		$rs = @mysql_query($escaped, $this->conn) or die("Could not execute query '$sql' in $filename");
 		return $rs;
 	}			
 

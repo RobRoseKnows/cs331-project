@@ -1,7 +1,7 @@
 <?php
 $title = "Advisor Sign Up";
 $debug = false;
-require("header.php");
+require("./header.php");
 require "includes/CommonMethods.php";
 $COMMON = new Common($debug);
 
