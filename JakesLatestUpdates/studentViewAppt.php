@@ -31,20 +31,20 @@ $COMMON = new Common($debug);
 				$row = mysql_fetch_row($rs); // get legit data
 				$numStudents = $row[5];
 				$advisorID = $row[8];				
-
-				if($numStudents == 1){
+				
+				if($advisorID != "Group"){
 					$sql2 = "select * from `Advisor Data` where `StudentID` = '$advisorID'";
 					$rs2 = $COMMON->executeQuery($sql2, $_SERVER["SCRIPT_NAME"]);
 					$row2 = mysql_fetch_row($rs2);
 					$advisorName = $row2[2] . " " . $row2[3];
-					$location = $row2[1];
 
 				}
 				else
 				{
-					$advisorname = "Group";
+					$advisorName = "Group";
 				}
-			
+
+				$location = $row[1];			
 				$date = $row[3];
 				$time = $row[2];
 				echo "<label for='info'>";

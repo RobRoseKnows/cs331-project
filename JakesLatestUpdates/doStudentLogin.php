@@ -22,6 +22,7 @@ $num_rows = mysql_num_rows($rs);
 $row = mysql_fetch_row($rs);
 
 $_SESSION['major']=$row[6];
+$_SESSION['badSignup']=FALSE;
 
 //if only one match, password correct
 if($num_rows == 1){

@@ -27,6 +27,13 @@
 		
 
 		<h1><?php echo "Welcome, {$_SESSION['SIDNumber']}!";  ?> </h1>
+		<?php
+			if($_SESSION['badSignup'] == TRUE)
+			{
+				echo"You've already scheduled something or that appointment was full!";
+				$_SESSION['badSignup'] = FALSE;
+			}
+		?>
 
 	</div>
 	</div>

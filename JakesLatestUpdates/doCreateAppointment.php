@@ -19,6 +19,10 @@ foreach($_POST['major'] as $major)
   $majorMaster .= ',';
 }
 $advID = ($_SESSION['ADVIDNumber']);
+if($_POST['Group'] == "Group")
+{
+	$advID = "Group";
+}
 //add each appointment at given time(s) to database
 foreach($_POST['time'] as $time){
 
